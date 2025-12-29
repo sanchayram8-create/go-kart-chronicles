@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Trophy, Zap, Users } from "lucide-react";
-import heroImage from "@/assets/hero-racing.jpg";
+import kartAction from "@/assets/kart-action.jpg";
 
 export function HeroSection() {
   const scrollToSection = (href: string) => {
@@ -12,15 +12,33 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
+      {/* Background with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary" />
+      
+      {/* Kart Image - Featured */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[60%] h-[80%] hidden lg:block">
+        <div className="relative w-full h-full">
+          <img 
+            src={kartAction} 
+            alt="LUASKART Racing Go Kart" 
+            className="w-full h-full object-cover object-center rounded-l-3xl shadow-2xl"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent rounded-l-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/20 rounded-l-3xl" />
+          {/* Glow effect */}
+          <div className="absolute -inset-1 bg-primary/20 blur-3xl -z-10 rounded-3xl" />
+        </div>
+      </div>
+
+      {/* Mobile kart image */}
+      <div className="absolute inset-0 lg:hidden">
         <img 
-          src={heroImage} 
-          alt="Go Kart Racing" 
+          src={kartAction} 
+          alt="LUASKART Racing Go Kart" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
       </div>
 
       {/* Speed Lines Effect */}
