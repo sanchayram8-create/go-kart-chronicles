@@ -43,6 +43,24 @@ const teamMembers = [
     department: "Engineering",
     bio: "Developing efficient power transmission systems from engine to wheels.",
   },
+  {
+    name: "Balachander",
+    role: "Design & CAE Lead",
+    department: "Engineering",
+    bio: "Leading computer-aided engineering and design optimization for vehicle performance.",
+  },
+  {
+    name: "Theneeshwari",
+    role: "Sales Lead",
+    department: "Operations",
+    bio: "Driving sponsorship acquisition and building strategic business partnerships.",
+  },
+  {
+    name: "Yudheesh",
+    role: "Cost Lead",
+    department: "Operations",
+    bio: "Managing budget allocation and ensuring cost-effective project execution.",
+  },
 ];
 
 const departmentColors: Record<string, string> = {
